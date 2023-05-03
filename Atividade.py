@@ -41,7 +41,7 @@ corte_sku = corte_sku.rename({0: 'A', 1: 'B', 2: 'C'})
 with pd.ExcelWriter('Curva_ABC.xlsx') as writer:
     dados.to_excel(writer, sheet_name='Tabela Principal', index=False)
     corte_sku.to_frame('Corte').to_excel(writer, sheet_name='Tabela Principal', index=True, startcol= 9)
-    proportion_sku.to_frame('SKU Proportion').to_excel(writer, sheet_name='Tabela Principal', index=False, startcol= 11)
-    proportion_value.to_frame('Value Proportion').to_excel(writer, sheet_name='Tabela Principal', index=False, startcol= 12)
+    proportion_sku.to_frame('Proporção de SKU').to_excel(writer, sheet_name='Tabela Principal', index=False, startcol= 11)
+    proportion_value.to_frame('Proporção de Valor').to_excel(writer, sheet_name='Tabela Principal', index=False, startcol= 12)
 
 print("Arquivo com a Curva ABC gerado com sucesso!")
